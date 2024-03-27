@@ -20,6 +20,5 @@ print("\n")
 print("Please enter the task below : ")
 final_todo = todo()
 print("TO-DO : ")
-for idx ,items in enumerate(final_todo, start = 1):
+for idx,items in enumerate(final_todo, start=1):
     print(idx,".", items)
-
