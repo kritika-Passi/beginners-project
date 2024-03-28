@@ -17,8 +17,24 @@ day = today.strftime("%B %d, %Y")
 print("Today is : ", day)
 print("\n")
 
-print("Please enter the task below : ")
-final_todo = todo()
+
+user_wish = input("""What would you like to do :\n
+      Press T for adding a task.
+      Press R for removing a task.
+      Press D for marking a task Done.
+      Press E for editing a task.
+      Press Q to quit""")
+
+while (user_wish.lower() != "Q"):
+    if user_wish == "":
+         print("please first type something")
+    elif user_wish.lower() == "T":
+          final_todo = todo()
+    elif user_wish.lower() == "R":
+        rm_task = input(print("Please mention the task you would like to delete"))
+            
+
+
 print("TO-DO : ")
 for idx,items in enumerate(final_todo, start=1):
-    print(idx,".", items)
+        print(idx,". ", items)
