@@ -13,10 +13,20 @@ def todo():
     return user_input_arr
 
 def remove():
-     
+     rm_task = input("mention the task number you would like to ")
+     for idx in user_input_arr:
+          if idx == rm_task:
+               user_input_arr.remove("rm_task")
+          
 def done():
-def edit():
+     done_task = input("enter the task number that is done")
+     for idx in user_input_arr:
+          if idx == done_task:
+               print(idx , "done")
+        
+#def edit():
      
+
 
 today = date.today()
 day = today.strftime("%B %d, %Y")
@@ -40,11 +50,9 @@ while True:
             rm_task = remove()
         elif user_wish.lower() == "D":
              done_task = done()
-        elif user_wish.lower() == "E":
-             edit_task = edit()
+        #elif user_wish.lower() == "E":
+             #edit_task = edit()
             
-
-
 print("TO-DO : ")
 for idx,items in enumerate(final_todo, start=1):
         print(idx,". ", items)
